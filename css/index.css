@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(0, 81, 255);
+    margin: 0;
+    padding: 0;
+}
+.logo-pokemon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.iniciar-partida{
+    display: flex;
+    justify-content: center;
+}
+.btn-primary{
+    width: 17rem !important;
+    margin-left: 1.5rem;
+    background-color: rgb(60, 78, 199) !important;
+    font-size: 1.2rem !important;
+    height: 3.5rem;
+    margin-top: 5rem;
+    font-family: 'Mochiy Pop One', sans-serif !important;
+}
+.btn-primary:hover{
+    background-color: rgb(229, 236, 16) !important;
+    transform: translate(0, -5px);
+    transition-duration: 0.5s;
+    color: rgb(60, 78, 199) !important;
+}
