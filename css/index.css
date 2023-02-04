@@ -9,10 +9,10 @@ body{
 }
 .logo-pokemon{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+    
 }
 .iniciar-partida{
     display: flex;
@@ -32,4 +32,41 @@ body{
     transform: translate(0, -5px);
     transition-duration: 0.5s;
     color: rgb(60, 78, 199) !important;
+}
+.img-pokemon1{
+    display: none;
+}
+.img-pokemon2{
+    display: none;
+}
+.tik-2{
+    display: none;
+}
+@media(max-width: 992px){
+    .img-pokemon{
+        display: none;
+    }
+    .img-pokemon1{
+        display: flex;
+        margin-top: 6rem;
+    }
+}
+@media(max-width: 576px){
+    .img-pokemon1{
+        display: none;
+    }
+    .img-pokemon2{
+        display: flex;
+        margin-top: 7rem;
+    }
+    .tik-1{
+        display: none;
+    }
+    .tik-2{
+        display: flex;
+        margin-top: 3rem;
+    }
+    .btn-primary{
+        margin-right: 1rem;
+    }
 }
