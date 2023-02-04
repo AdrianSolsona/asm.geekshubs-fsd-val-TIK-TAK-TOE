@@ -57,12 +57,10 @@ body{
 .tur-2{
     margin-top: 3.5rem;
 }
-.img-jug{
-    display: none;
-}
+
 .cont-juego{
     width: 30rem;
-    height: 30rem;
+    height: 13rem;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 0;
@@ -83,9 +81,7 @@ body{
     background-color: rgb(3, 78, 24);
     transition: background-color ease-in 0.5s;
 }
-.sqr{
-    display: none;
-}
+
 .poke-batalla{
     display: flex;
     justify-content: center;
