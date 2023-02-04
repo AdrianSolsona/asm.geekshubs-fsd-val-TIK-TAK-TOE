@@ -21,7 +21,7 @@
             <div class=" cas-info">
                  <div>
                     <button type="button" onclick="location.reload()" class="btn btn-primary">NUEVA PARTIDA</button>
-                    <div id="message"></div>
+                    <a id="message" href="../pages/ganador.html"></a> 
                  </div>
                  <div>
                     <p class="turno">Turno actual:</p>
@@ -31,6 +31,9 @@
                  </div>
                  <div>
                     <p class="turno">(Charmander)</p>
+                 </div>
+                 <div class="imagen-casilla">
+                    
                  </div>
             </div>
             <div class=" cas-info">
@@ -42,6 +45,9 @@
                  </div>
                  <div>
                     <p class="turno">(Squirtle)</p>
+                 </div>
+                 <div class="imagen-casilla sqr">
+                     
                  </div>
             </div>
         </div>
@@ -74,12 +80,18 @@
                 
             </div>
         </div>
+        <div class="imagen-casilla img-cas-1">
+            <div class="jugador-charmander">
+                <img class="imagen-jugadores" src="../images/jugador1-peq-tab-def.png" alt="">
+                <img id="charmanderCas" src="../images/charmander-peq-def1.png">
+            </div>
+            <div class="jugador-squirtle">
+                <img class="imagen-jugadores" src="../images/jugador2-tab-peq-def.png" alt="">
+                <img id="squirtleCas"  src="../images/squirtle-peq-def1.png">
+            </div>
+            
+        </div>
     </div>
-    <div>
-        <img id="charmanderCas" class="imagen-casilla" src="../images/charmander-peq-def1.png">
-        <img id="squirtleCas" class="imagen-casilla sqr" src="../images/squirtle-peq-def1.png">
-    </div>
-    
     <div class="poke-batalla">
         <button type="button" onclick="location.href='../pages/batalla.html'" class="btn btn-primary">BATALLA POKEMÓN</button>
     </div>

@@ -28,16 +28,6 @@ function hacerClick(pos){
     validarGanador()//Comprobamos si hay un ganador
 }
 
-function mostrarFichas(){
-    
-    if(turno == charmander){
-        document.getElementById("charmanderCas").style.visibility = "visible"
-    }
-    if(turno == squirtle){
-        document.getElementById("squirtleCas").style.visibility = "visible"
-    }
-    
-}
 //Inicio de la funcion de reset para la nueva partida
 
 function volverJugar() {
@@ -46,12 +36,14 @@ function volverJugar() {
     for (let i = 0; i < 9; i++) {
         document.getElementById(i).innerHTML = "" //Ponemos en blanco el tablero de nuevo(reemplazamos con cadena vacia)
     }
-    document.getElementById("message")
+    
+    //document.getElementById("message")
 }
 
 //Función para mostrar al ganador
-function ganadorFinal(ganador) {
-    document.getElementById("message").innerHTML = ganador
+function ganadorFinal() {
+        window.location.href = "../pages/ganador.html"
+    //document.getElementById("message").innerHTML = ganador
 }
 
 //Funcion para validar el ganador(analizaremos las lineas verticales, diagonales y horizontales cada vez que demos click sobre una celda)
