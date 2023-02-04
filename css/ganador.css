@@ -7,7 +7,7 @@ body{
     padding: 0;
 }
 .tik-tak{
-    margin-top: 3rem;
+    margin-top: 5rem;
     display: flex;
     justify-content: center
 }
@@ -27,4 +27,53 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+}
+.enhorabuena-1{
+    display: none;
+}
+.enhorabuena-peq{
+    display: none;
+}
+.tik-tak-mvl{
+    display: none;
+}
+.ganador-mvl{
+    display: none;
+}
+@media(max-width: 992px){
+    .enhorabuena{
+        display: none;
+    }
+    .enhorabuena-1{
+        display: flex;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .tik-tak-mvl{
+        display: flex;
+        margin-top: 7rem;
+    }
+    .tik-tak-nm{
+        display: none;
+    }
+    .ganador-nm{
+        margin-top: 4rem;
+    }
+}
+@media(max-width: 576px){
+    .ganador-mvl{
+        display: flex;
+    }
+    .ganador-nm{
+        display: none;
+    }
+    .enhorabuena-1{
+        display: none;
+    }
+    .enhorabuena-peq{
+        display: flex;
+    }
+    .ganador-total{
+        margin-bottom: 3rem;
+    }
 }
