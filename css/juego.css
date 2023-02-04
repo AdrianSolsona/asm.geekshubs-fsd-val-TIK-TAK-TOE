@@ -11,6 +11,9 @@ body{
     display: flex;
     justify-content: center
 }
+.tik-tak-mvl{
+    display: none;
+}
 .tablero{
     display: flex;
     gap: 3rem;
@@ -19,12 +22,11 @@ body{
     margin-bottom: 0;
 }
 .cont-info{
-    background-color: black;
-    height: 30rem;
+    height: 15rem;
     width: 20rem;
 }
 .cas-info{
-    height: 50%;
+    height: 100%;
     width: 100%;
     background-color: #3366af;
     border: black solid 1px;
@@ -93,10 +95,75 @@ body{
     background-color: rgb(3, 78, 24);
     transition: background-color ease-in 0.5s;
 }
-
 .poke-batalla{
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
-    margin-top: 2.5rem;
+    margin-top: 17.5rem;
+}
+@media(max-width: 1200px){
+    #charmanderCas{
+        margin-top: 1rem;
+    }
+    #squirtleCas{
+        margin-top: 1rem;
+    }
+    .cont-info{
+        margin-left: 1.5rem;
+    }
+}
+@media(max-width: 992px){
+    .tablero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cont-info{
+        width: 29rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        height: 15rem;
+        margin-left: 0rem;
+    }
+    .imagen-casilla{
+        margin-top: 18rem;
+        margin-bottom: 1rem;
+    }
+    .poke-batalla{
+        margin-top: 3rem;
+    }
+}
+@media(max-width: 576px){
+    .tik-tak-mvl{
+        display: flex;
+    }
+    .tik-tak-nm{
+        display: none;
+    }
+    .cas-info{
+        width: 12rem;
+    }
+    .boton-inicio{
+        width: 10rem !important;
+        height: 4rem;
+    }
+    .cont-juego{
+        width: 20rem;
+        height: 8rem;
+    }
+    .cont-info{
+        width: 20rem;
+        margin-right: 0rem;
+        display: flex;
+        align-items: center;
+        margin-right: 0.8rem;
+        margin-left: 0rem;
+    }
+    .tablero{
+        margin-left: 0.3rem;
+    }
+    .imagen-casilla{
+        margin-top: 15rem;
+    }
 }

@@ -17,6 +17,7 @@ body{
     margin-top: 2rem;
     gap: 10rem;
     width: 100%;
+    margin-left: 1.2rem;
 }
 .squirtle-img{
     margin-top: 5rem;
@@ -33,7 +34,6 @@ body{
 }
 .btn-primary{
     width: 15rem !important;
-    margin-left: 1.5rem;
     background-color: rgb(60, 78, 199) !important;
     font-size: 1.2rem !important;
     height: 3.5rem;
@@ -56,4 +56,96 @@ body{
 }
 .player1{
     margin-top: 0rem;
+}
+.tik-tak-mvl{
+    display: none;
+}
+.img-cha-mvl{
+    display: none;
+}
+.img-char-mvl{
+    display: none;
+}
+.img-sqr-mvl{
+    display: none;
+}
+.sqr-icon{
+    display: none;
+}
+.boton-partida-mvl{
+    display: none;
+}
+
+@media(max-width: 1400px){
+    .pokemon-battle{
+        margin-left: 0rem;
+        gap: 4rem;
+    }
+    .players{
+        gap: 37rem;
+    }
+}
+@media(max-width: 1200px){
+    .pokemon-battle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+    .versus{
+        margin-top: 5rem;
+    }
+    .players{
+        display: none;
+    }
+    .boton-partida{
+        display: none;
+    }
+    .squirtle-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+    .img-sqr-mvl{
+        display: flex;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .charmander-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-char-mvl{
+        display: flex;
+        margin-top: 2rem; 
+    }
+    .boton-partida-mvl{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+}
+@media(max-width: 576px){
+
+    .tik-tak-mvl{
+        display: flex;
+    }
+    .tik-tak-nm{
+        display: none;
+    }
+    .img-principal-sqr{
+        display: none;
+    }
+    .sqr-icon{
+        display: flex;
+    }
+    .img-cha-mvl{
+        display: flex;
+    }
+    .img-principal-char{
+        display: none;
+    }
 }
