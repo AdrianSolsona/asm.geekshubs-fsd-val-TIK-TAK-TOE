@@ -16,10 +16,13 @@
     <!--<div class="tik-tak">
         <a href="../index.html"><img src="../images/poke-battle-def.png" alt=""></a>
     </div>-->
-    <button type="button" onclick="arriba()" class="btn btn-primary boton-inicio-mvl">Arriba</button>
-    <button type="button" onclick="abajo()" class="btn btn-primary boton-inicio-mvl">Abajo</button>
-    <button type="button" onclick="derecha()" class="btn btn-primary boton-inicio-mvl">Derecha</button>
-    <button type="button" onclick="izquierda()" class="btn btn-primary boton-inicio-mvl">Izquierda</button>
+    <div class="mandos">
+        <button type="button" onclick="arriba()" class="btn btn-primary boton-inicio-mvl-1"><i class="bi bi-caret-up-fill"></i></button>
+        <button type="button" onclick="abajo()" class="btn btn-primary boton-inicio-mvl-2"><i class="bi bi-caret-down-fill"></i></button>
+        <button type="button" onclick="derecha()" class="btn btn-primary boton-inicio-mvl-3"><i class="bi bi-caret-right-fill"></i></button>
+        <button type="button" onclick="izquierda()" class="btn btn-primary boton-inicio-mvl-4"><i class="bi bi-caret-left-fill"></i></button>
+    </div>
+    
     <div id="fondo">
         <div id="personaje"></div>
     </div>
@@ -27,6 +30,18 @@
     </div>
     <div class="arbol">
     </div>
+    <div class="div-edificios">
+        <div class="edificios">
+        </div>
+        <div class="edificios">
+        </div>
+        <div class="edificios">
+        </div>
+        <div class="edificios">
+        </div>
+
+    </div>
+    
     <script src="/JS/paseo.js"></script>
 </body>
 </html>
