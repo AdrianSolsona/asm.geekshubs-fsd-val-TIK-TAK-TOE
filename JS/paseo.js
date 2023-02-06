@@ -1,8 +1,29 @@
 
 let personaje = document.getElementById("personaje");
 let contador = 0;
+let numeroArboles = 30;
 
+function generacionArboles(){
+    for(let i = 0; i < numeroArboles; i++){
+        const div = document.createElement('div')
+        div.classList.add('arbol')
+        div.style.left = Math.random() * 100 + '%'
+        div.style.top = Math.random() * 100 + '%'
+        document.body.appendChild(div)
+    }
+}
+function generacionPokeballs() {
+    for(let i = 0; i < numeroArboles; i++){
+        const div = document.createElement('div')
+        div.classList.add('pokeball')
+        div.style.left = Math.random() * 100 + '%'
+        div.style.top = Math.random() * 100 + '%'
+        document.body.appendChild(div)
+    }
+}
 
+generacionArboles()
+generacionPokeballs()
 let direccion = "abajo";
 
 let abajo = function(){
