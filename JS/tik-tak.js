@@ -6,6 +6,8 @@ let squirtle = document.getElementById("squirtleCas").innerHTML = '<img id="squi
 let turno = charmander;
 //Inicio de todas las celdas vacias(9)
 let tablero = [0,0,0,0,0,0,0,0,0]
+let ficha1 = 3;
+let ficha2 = 3;
 
 //Función para cambiar de turno
 function cambiarTurno(){
@@ -14,13 +16,16 @@ function cambiarTurno(){
 }
 //Inicio funcion para marcar la celda que tenemos seleccionada
 function marcarCelda(celda){
-    if(tablero[celda] === 0){// di la celda esta vacia realizaremos lo siguiente
-
+    if((tablero[celda] === 0)  && (ficha1 > 0 || ficha2  > 0)){// di la celda esta vacia realizaremos lo siguiente
+        (turno == charmander) ? ficha1-- : ficha2--;
         tablero[celda] = turno// Aqui guardamos el turno sea "y" o la "x"
         document.getElementById(celda).innerHTML = turno //Introduccimos el turno correspondiente en la celda
         cambiarTurno() // Cambiamos de turno
     }
+    console.log(ficha1)
+console.log(ficha2)
 }
+
 
 //Inicio de la Funcion al dar click sobre celda
 function hacerClick(pos){
