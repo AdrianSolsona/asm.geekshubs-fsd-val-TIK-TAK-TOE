@@ -1,3 +1,15 @@
+
+let jugador1Storage = document.getElementById("nombreJug1");
+jugador1Storage.innerHTML = sessionStorage.getItem("Nombre del jugador 1");
+
+let jugador2Storage = document.getElementById("nombreJug2");
+jugador2Storage.innerHTML = sessionStorage.getItem("Nombre del jugador 2");
+
+
+
+
+
+
 //Establecemos las fichas del juego en este caso las imagenes de charmander y squirtle
 let charmander = document.getElementById("charmanderCas").innerHTML = '<img id="charmanderCas" class="imagen-casilla" src="../images/charmander-peq-def1.png"></img>'
 let squirtle = document.getElementById("squirtleCas").innerHTML = '<img id="squirtleCas" class="imagen-casilla sqr" src="../images/squirtle-peq-def1.png"></img>'

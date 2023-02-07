@@ -40,18 +40,22 @@
     </div>
     <div>
         <div class="boton-partida-mvl">
-            <button type="button" onclick="location.href='./juego.html'" class="btn btn-primary boton-inicio-mvl">INICIAR PARTIDA</button>
+            <button type="button"  class="btn btn-primary boton-inicio-mvl"><a id="irJuego">INICIAR PARTIDA</a></button>
         </div>
     </div>
     <div class="players">
         <div class="nombre-jugador">
-            <input class="info-jugador" type="text">
+            <input class="info-jugador" type="text" id="nombreJugador1">
             <img src="../images/player-1-def.png" alt="">
         </div>
         <div class="nombre-jugador">
-            <input class="info-jugador" type="text">
+            <input class="info-jugador" type="text" id="nombreJugador2">
             <img src="../images/jugador-2-def.png" alt="">
         </div>
     </div>
+    
+    <script src="../JS/eleccionJugador.js"></script>
 </body>
 </html>
+
+<!--onclick="location.href='./juego.html'"-->
