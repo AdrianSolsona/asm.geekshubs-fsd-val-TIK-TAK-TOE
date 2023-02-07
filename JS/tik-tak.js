@@ -8,6 +8,46 @@ let turno = charmander;
 let tablero = [0,0,0,0,0,0,0,0,0]
 let ficha1 = 3;
 let ficha2 = 3;
+//Inicio del display junto a la pantalla
+let fraseTurno1 = document.getElementById("infoJugador1")
+let textoTurno1 = document.getElementById("textoJugador1")
+fraseTurno1.innerHTML = 3;
+textoTurno1.innerHTML = "te quedan varios turnos"
+
+function contadorJugador1(){
+    if(ficha1 > 1){
+        fraseTurno1.innerHTML = ficha1
+        textoTurno1.innerHTML = "Te quedan varios turnos"
+    }
+    else if(ficha1 === 1){
+        fraseTurno1.innerHTML = ficha1
+        textoTurno1.innerHTML = "Te queda un turno"
+    }
+    else{
+        fraseTurno1.innerHTML = ""
+        textoTurno1.innerHTML = "Te has quedado sin turnos"
+    }
+}
+
+let fraseTurno2 = document.getElementById("infoJugador2")
+let textoTurno2 = document.getElementById("textoJugador2")
+fraseTurno2.innerHTML = 3;
+textoTurno2.innerHTML = "te quedan varios turnos"
+
+function contadorJugador2(){
+    if(ficha2 > 1){
+        fraseTurno2.innerHTML = ficha2
+        textoTurno2.innerHTML = "Te quedan varios turnos"
+    }
+    else if(ficha2 === 1){
+        fraseTurno2.innerHTML = ficha2
+        textoTurno2.innerHTML = "Te queda un turno"
+    }
+    else{
+        fraseTurno2.innerHTML = ""
+        textoTurno2.innerHTML = "Te has quedado sin turnos"
+    }
+}
 
 //Función para cambiar de turno
 function cambiarTurno(){
@@ -31,6 +71,8 @@ console.log(ficha2)
 function hacerClick(pos){
     marcarCelda(pos) //Aqui llamamos a la funcion de marcarCelda para que cuando hagamos click quede marcada
     validarGanador()//Comprobamos si hay un ganador
+    contadorJugador1()
+    contadorJugador2()
 }
 
 //Inicio de la funcion de reset para la nueva partida
