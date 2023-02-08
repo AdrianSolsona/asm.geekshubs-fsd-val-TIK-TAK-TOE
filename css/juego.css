@@ -33,7 +33,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    text-align: center; 
+}
+.texto-jugadores{
+    margin-top: 0.5rem;
 }
 .btn-primary{
     width: 15rem !important;
@@ -57,7 +60,7 @@ body{
     margin-bottom: 1.5rem;
 }
 .tur-2{
-    margin-top: 3.5rem;
+    margin-top: 1.5rem;
 }
 .imagen-casilla{
     display: flex;
@@ -68,6 +71,9 @@ body{
 }
 .imagen-jugadores{
     margin-right: 2rem;
+}
+.partida-nueva{
+    margin-top: 2rem;
 }
 
 .cont-juego{
@@ -133,6 +139,9 @@ body{
     .poke-batalla{
         margin-top: 3rem;
     }
+    .boton-inicio{
+        margin-top: 4rem;
+    }
 }
 @media(max-width: 576px){
     .tik-tak-mvl{
@@ -143,10 +152,6 @@ body{
     }
     .cas-info{
         width: 12rem;
-    }
-    .boton-inicio{
-        width: 10rem !important;
-        height: 4rem;
     }
     .cont-juego{
         width: 20rem;

@@ -76,6 +76,17 @@ function marcarCelda(celda){
         document.getElementById(celda).innerHTML = turno //Introduccimos el turno correspondiente en la celda
         cambiarTurno() // Cambiamos de turno
     }
+    else if((turno !== 0) && (ficha1 || ficha2 == 0)){
+        if(turno == charmander){
+            document.getElementById(celda).innerHTML = "";
+            ficha1++
+        }
+        else if(turno == squirtle){
+            document.getElementById(celda).innerHTML = "";
+            ficha2++
+        }
+        tablero[celda] = 0;
+    }
     console.log(ficha1)
 console.log(ficha2)
 }
