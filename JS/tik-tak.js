@@ -1,9 +1,11 @@
 
 let jugador1Storage = document.getElementById("nombreJug1");
-jugador1Storage.innerHTML = sessionStorage.getItem("Nombre del jugador 1");
+jugador1Storage.innerHTML = JSON.parse(sessionStorage.getItem("Nombre del jugador 1"));
 
 let jugador2Storage = document.getElementById("nombreJug2");
-jugador2Storage.innerHTML = sessionStorage.getItem("Nombre del jugador 2");
+jugador2Storage.innerHTML = JSON.parse(sessionStorage.getItem("Nombre del jugador 2"));
+
+
 
 
 
@@ -25,7 +27,7 @@ let fraseTurno1 = document.getElementById("infoJugador1")
 let textoTurno1 = document.getElementById("textoJugador1")
 fraseTurno1.innerHTML = 3;
 textoTurno1.innerHTML = "te quedan varios turnos"
-
+//Inicio conteo fichas
 function contadorJugador1(){
     if(ficha1 > 1){
         fraseTurno1.innerHTML = ficha1
