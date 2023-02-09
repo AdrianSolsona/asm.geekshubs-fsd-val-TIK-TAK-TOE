@@ -6,11 +6,13 @@ body{
     margin: 0;
     padding: 0;
 }
+/*Estilos referentes a las imagene de tik tak toe*/
 .tik-tak{
     margin-top: 3rem;
     display: flex;
     justify-content: center
 }
+/*Estilos del div contenedor de las imagenes y inputs*/
 .pokemon-battle{
     display: flex;
     justify-content: center;
@@ -32,6 +34,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+.titulo-jugador{
+    margin-top: 1.5rem;
+}
 .versus{
     margin-top: 12rem;
     display: flex;
@@ -43,6 +48,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+/*Estilos del boton de inicio de partida en la parte inferior*/
 .btn-primary{
     width: 15rem !important;
     background-color: rgb(60, 78, 199) !important;
@@ -65,17 +71,7 @@ body{
 #irJuego:active{
     text-decoration: none;
 }
-.players{
-    display: flex;
-    justify-content: center;
-    gap: 45rem;
-    width: 100%;
-    margin-bottom: 4rem;
-}
-.nombre-jugador{
-    display: flex;
-    flex-direction: column;
-}
+/*Estilos de los inputs*/
 .info-jugador{
     background-color: rgb(60, 78, 199);
     margin-top: 1.5rem;
@@ -88,32 +84,21 @@ body{
     border-radius: 0.6rem;
     font-family: 'Mochiy Pop One', sans-serif;
 }
+/*Distintos logos en tamaño de pokemon*/
 .tik-tak-mvl{
     display: none;
 }
 .img-cha-mvl{
     display: none;
 }
-.img-char-mvl{
-    display: none;
-}
-.img-sqr-mvl{
-    display: none;
-}
 .sqr-icon{
     display: none;
 }
-.boton-partida-mvl{
-    display: none;
-}
-
+/*Inicio de media query*/
 @media(max-width: 1400px){
     .pokemon-battle{
         margin-left: 0rem;
         gap: 4rem;
-    }
-    .players{
-        gap: 37rem;
     }
 }
 @media(max-width: 1200px){
@@ -127,9 +112,6 @@ body{
     .versus{
         margin-top: 5rem;
     }
-    .players{
-        display: flex;
-    }
     .btn.btn-primary{
         margin-top: 5rem;
         margin-bottom: 4rem;
@@ -140,24 +122,10 @@ body{
         align-items: center;
         margin-right: 0;
     }
-    .img-sqr-mvl{
-        display: flex;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
     .charmander-img{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .img-char-mvl{
-        display: flex;
-        margin-top: 2rem; 
-    }
-    .boton-partida-mvl{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 5rem;
     }
 }
 @media(max-width: 576px){

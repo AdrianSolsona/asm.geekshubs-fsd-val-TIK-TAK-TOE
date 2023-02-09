@@ -6,6 +6,7 @@ body{
     margin: 0;
     padding: 0;
 }
+/*Estilos referentes a las imagene de tik tak toe*/
 .tik-tak{
     margin-top: 3rem;
     display: flex;
@@ -14,6 +15,7 @@ body{
 .tik-tak-mvl{
     display: none;
 }
+/*Estilos referentes al tablero de juego*/
 .tablero{
     display: flex;
     gap: 3rem;
@@ -21,6 +23,7 @@ body{
     margin-top: 4.5rem;
     margin-bottom: 0;
 }
+/*Inicio del display izquierdo donde se incluye la informacion de jugadores y turnos*/
 .cont-info{
     height: 15rem;
     width: 20rem;
@@ -38,6 +41,7 @@ body{
 .texto-jugadores{
     margin-top: 0.5rem;
 }
+/*Inicio de los estilos de los botones*/
 .btn-primary{
     width: 15rem !important;
     background-color: rgb(60, 78, 199) !important;
@@ -53,6 +57,7 @@ body{
     transition-duration: 0.5s;
     color: rgb(60, 78, 199) !important;
 }
+/*Inicio de los estilos del turno actual de informacion del display izquierdo*/
 .turno{
     color: rgb(229, 236, 16) !important;
     font-family: 'Mochiy Pop One', sans-serif !important;
@@ -62,6 +67,7 @@ body{
 .tur-2{
     margin-top: 1.5rem;
 }
+/*Estilos referentes al espacio a la derecha del tablero donde se encuentran los pokemons asignados a cada jugador*/
 .imagen-casilla{
     display: flex;
     flex-direction: column;
@@ -72,10 +78,13 @@ body{
 .imagen-jugadores{
     margin-right: 2rem;
 }
+#charmanderCas{
+    margin-left: 0.32rem;
+}
 .partida-nueva{
     margin-top: 2rem;
 }
-
+/*Inicio de los Estilos referentes al tablero de juego con las 9 cuadriculas*/
 .cont-juego{
     width: 30rem;
     height: 10rem;
@@ -83,12 +92,6 @@ body{
     grid-template-columns: auto auto auto;
     gap: 0;
     margin-bottom: 2.5rem;
-    /*
-    border-right-style: outset;
-    border-bottom-style: outset;
-    border-color: rgb(248, 245, 245);
-    border-width: 3rem;
-    */
 }
 .casilla{
     width:100%;
@@ -101,11 +104,12 @@ body{
     background-color: rgb(3, 78, 24);
     transition: background-color ease-in 0.5s;
 }
+/*Estilos del boton de la parte inferior*/
 .poke-batalla{
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
-    margin-top: 17.5rem;
+    margin-top: 14.5rem;
 }
 @media(max-width: 1200px){
     #charmanderCas{
@@ -116,6 +120,9 @@ body{
     }
     .cont-info{
         margin-left: 1.5rem;
+    }
+    .boton-inicio{
+        margin-right: 1.5rem;
     }
 }
 @media(max-width: 992px){

@@ -13,21 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 </head>
 <body style="background-color: rgba(236, 0, 0, 0.733);">
+    <!--Titulos de tik tak toe y pokemon-->
     <div class="tik-tak">
         <a href="../index.html"><img class="tik-tak-nm" src="../images/tik-pokemon-def.png" alt=""></a>
         <a href="../index.html"><img class="tik-tak-mvl" src="../images/tik-mvl-1-def.png" alt=""></a>
     </div>
+    <!--Inicio del div principal el cual incluye el propio tablero y el display izquierdo-->
     <div class="tablero">
+        <!--Inicio del display izquierdo donde se incluye la informacion de jugadores y turnos-->
         <div class="cont-info">
             <div class=" cas-info">
-                 <div>
-                    <a id="message" href="../pages/ganador.html"></a> 
-                 </div>
+                 <!--Inicio de la informacion del jugador 1-->
                  <div>
                     <p class="turno">Turno actual:</p>
                  </div>
-                 <div id="infoJugador1">
-                    <!--<img class="img-jug" src="../images/jugador1-peq-tab-def.png" alt="">-->
+                 <div id="infoJugador1">  
                  </div>
                  <div class="texto-jugadores" id="textoJugador1"></div>
                  <div class="texto-jugadores" id="nombreJug1"></div>
@@ -38,23 +38,22 @@
                     
                  </div>
             </div>
+             <!--Inicio de la informacion del jugador 1-->
             <div class=" cas-info">
                  <div>
                     <p class="turno tur-2">Turno actual:</p>
                  </div>
                  <div id="infoJugador2">
-                    <!--<img class="img-jug" src="../images/jugador2-tab-peq-def.png" alt="">-->
                  </div>
                  <div class="texto-jugadores" id="textoJugador2"></div>
                  <div class="texto-jugadores" id="nombreJug2"></div>
                  <div>
                     <p class="turno">(Squirtle)</p>
                  </div>
-                 <div class="imagen-casilla sqr">
-                     
-                 </div>
+                 <div class="imagen-casilla sqr"></div>
             </div>
         </div>
+        <!--Inicio del propio tablero con sus 9 cuadriculas-->
         <div class=" row row-cols-3 cont-juego raya">
             <div id="0" onclick="hacerClick(0);" class="col-md-4 casilla cas-1"></div>
             <div id="1" onclick="hacerClick(1);" class="casilla cas-2"></div>
@@ -66,6 +65,7 @@
             <div id="7" onclick="hacerClick(7)" class="casilla cas-8"></div>
             <div id="8" onclick="hacerClick(8)" class="casilla cas-9"></div>
         </div>
+         <!--Inicio de la parte a la derecha de la cuadricula donde vemos los pokemons y los jugadores-->
         <div class="imagen-casilla img-cas-1">
             <div class="jugador-charmander">
                 <img class="imagen-jugadores" src="../images/jugador1-peq-tab-def.png" alt="">
@@ -75,11 +75,13 @@
                 <img class="imagen-jugadores" src="../images/jugador2-tab-peq-def.png" alt="">
                 <img id="squirtleCas"  src="../images/squirtle-peq-def1.png">
             </div>
+             <!--Boton de nueva partida-->
             <div class="partida-nueva">
                 <button type="button" onclick="location.reload()" class="btn btn-primary boton-inicio">NUEVA PARTIDA</button>
             </div>
         </div>
     </div>
+     <!--Boton de acceso al juego alternativo-->
     <div class="poke-batalla">
         <button type="button" onclick="location.href='../pages/batalla.html'" class="btn btn-primary">BATALLA POKEMÓN</button>
     </div>

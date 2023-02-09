@@ -7,6 +7,7 @@ body{
     margin: 0;
     padding: 0;
 }
+/*Estilos referentes a las imagenes principales*/
 .logo-pokemon{
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@ body{
     display: flex;
     justify-content: center;
 }
+/*Estilos del boton de inicio de iniciar partida*/
 .btn-primary{
     width: 17rem !important;
     margin-left: 1.5rem;
@@ -32,6 +34,7 @@ body{
     transition-duration: 0.5s;
     color: rgb(60, 78, 199) !important;
 }
+/*Distintos logos en tamaño de pokemon*/
 .img-pokemon1{
     display: none;
 }
@@ -41,6 +44,7 @@ body{
 .tik-2{
     display: none;
 }
+/*Inicio de media query*/
 @media(max-width: 992px){
     .img-pokemon{
         display: none;

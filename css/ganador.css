@@ -6,11 +6,16 @@ body{
     margin: 0;
     padding: 0;
 }
+/*Estilos referentes a las imagene de tik tak toe*/
 .tik-tak{
     margin-top: 5rem;
     display: flex;
     justify-content: center
 }
+.tik-tak-mvl{
+    display: none;
+}
+/*Estilos referentes a las imagenes de enhorabuena*/
 .ganadores{
     display: flex;
     justify-content: center;
@@ -18,28 +23,28 @@ body{
     align-items: center;
     margin-top: 5rem;
 }
-.trofeo{
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-}
-.ganador-total{
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-}
 .enhorabuena-1{
     display: none;
 }
 .enhorabuena-peq{
     display: none;
 }
-.tik-tak-mvl{
-    display: none;
+/*Estilos referentes a las imagenes de trofeo*/
+.trofeo{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+/*Estilos referentes a las imagenes de ganador*/
+.ganador-total{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
 }
 .ganador-mvl{
     display: none;
 }
+/*Inicio de las media query*/
 @media(max-width: 992px){
     .enhorabuena{
         display: none;

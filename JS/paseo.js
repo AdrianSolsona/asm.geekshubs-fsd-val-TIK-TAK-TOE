@@ -3,7 +3,7 @@ let personaje = document.getElementById("personaje");
 
 let contador = 0;
 let numeroArboles = 30;
-let numeroEdificios = 7;
+let numeroEdificios = 8;
 let numeroBolas =10;
 
 function generacionArboles(){
@@ -31,7 +31,6 @@ function generacionEdificios(){
         div.classList.add('edificios')
         div.style.left = (Math.random() * 100 + "%")
         div.style.top = Math.random() * 100 + "%"
-        div.style.margin = "20px !important"
         document.body.appendChild(div) 
     }
     
@@ -71,7 +70,7 @@ var animacionPersonaje = function(){
     setInterval(function(){
         personaje.style.backgroundPositionX = (50 * contador) + "px" //Cantidad de espacios a la derecha que movemos el personaje para pasar al siguiente sprite
         contador++;
-    },250) //Valor del setInterval cambiara de posicion cada 300 milisegundos(0.3segundos)
+    },250) //Valor del setInterval cambiara de posicion cada 250 milisegundos(0.25segundos)
 
     
 

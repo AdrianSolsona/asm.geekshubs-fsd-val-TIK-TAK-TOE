@@ -13,53 +13,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 </head>
 <body style="background-color: rgba(236, 0, 0, 0.733);">
+    <!--Titulos de tik tak toe y pokemon-->
     <div class="tik-tak">
         <a href="../index.html"><img class="tik-tak-nm" src="../images/tik-pokemon-def.png" alt=""></a>
         <a href="../index.html"><img class="tik-tak-mvl" src="../images/tik-mvl-1-def.png" alt=""></a>
     </div>
+    <!--Inicio del div principal donde se encuentran las imagenes y inputs a excepción del boton de inicio de partida-->
     <div class="pokemon-battle">
+        <!--Bloque charmander-->
         <div class="charmander-img">
             <img class="img-principal-char" src="../images/charmander-top-rec.png" alt="">
             <img class="img-cha-mvl" src="../images/charmander-mvl-def.png" alt="">
-            <img class="img-char-mvl" src="../images/ganador-jugador1-def.png" alt="">
             <input class="info-jugador" type="text" id="nombreJugador1">
+            <img class="titulo-jugador" src="../images/player-1-def.png" alt="">
         </div>
+        <!--Logo Vs que separa las imagenes-->
         <div>
             <div class="versus">
                 <img src="../images/versus-g-def.png" alt="">
             </div>
-            <!--<div class="boton-partida">
-             <button type="button" onclick="location.href='./juego.html'" class="btn btn-primary boton-inicio">INICIAR PARTIDA</button> 
-                <div type="button" onclick="seleccionJugador()" class="btn btn-primary boton-inicio-mvl"><a id="irJuego">INICIAR PARTIDA</a></div>
-            </div>
-        -->  
         </div>
+        <!--Bloque squirtle-->
         <div class="squirtle-img" >
             <img class="img-principal-sqr" src="../images/squirtle-top-def-rec.png" alt="">
             <img class="sqr-icon" src="../images/sqr-mvl-def.png" alt="">
-            <img class="img-sqr-mvl" src="../images/jugador-2-def.png" alt="">
-            <input class="info-jugador" type="text" id="nombreJugador2">
+            <input class="info-jugador sqr-inp" type="text" id="nombreJugador2">
+            <img class="titulo-jugador" src="../images/jugador-2-def.png" alt="">
         </div>
     </div>
+       <!--Boton de inicio de partida de la parte inferior-->
     <div>
         <div class="boton-partida">
-            <!-- <button type="button" onclick="location.href='./juego.html'" class="btn btn-primary boton-inicio">INICIAR PARTIDA</button> -->
             <div type="button" onclick="seleccionJugador()" class="btn btn-primary boton-inicio-mvl"><a id="irJuego">INICIAR PARTIDA</a></div>
         </div>
     </div>
-
-    <div class="players">
-        <div class="nombre-jugador">
-            
-            <img src="../images/player-1-def.png" alt="">
-        </div>
-        <div class="nombre-jugador jugd1">
-            <img src="../images/jugador-2-def.png" alt="">
-        </div>
-    </div>
-
     <script src="../JS/eleccionJugador.js"></script>
 </body>
 </html>
-
-<!--onclick="location.href='./juego.html'"-->
