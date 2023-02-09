@@ -49,7 +49,7 @@ body{
     font-size: 1.2rem !important;
     height: 3rem;
     margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     font-family: 'Mochiy Pop One', sans-serif !important;
     color: rgb(229, 236, 16) !important;
 }
@@ -59,7 +59,10 @@ body{
     transition-duration: 0.5s;
     color: rgb(60, 78, 199) !important;
 }
-#idJuego{
+#irJuego{
+    text-decoration: none;
+}
+#irJuego:active{
     text-decoration: none;
 }
 .players{
@@ -67,6 +70,7 @@ body{
     justify-content: center;
     gap: 45rem;
     width: 100%;
+    margin-bottom: 4rem;
 }
 .nombre-jugador{
     display: flex;
