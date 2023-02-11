@@ -16,6 +16,8 @@ let tablero = [0,0,0,0,0,0,0,0,0]
 //Contador de fichas restantes
 let ficha1 = 3;
 let ficha2 = 3;
+
+let eliminacionFicha = false;
 //Componentes que queremos mostrar en el display izquierdo junto a la pantalla del jugador 1
 let fraseTurno1 = document.getElementById("infoJugador1")
 let textoTurno1 = document.getElementById("textoJugador1")
@@ -70,17 +72,20 @@ function marcarCelda(celda){
         tablero[celda] = turno// Aqui guardamos el turno sea "y" o la "x"
         document.getElementById(celda).innerHTML = turno //Introduccimos el turno correspondiente en la celda
         cambiarTurno() // Cambiamos de turno
+        eliminacionFicha = false
     }
     //Si la celda esta llena y ficha 1 o 2 son iguales a 0 ejecutaremos el else if
-    else if((turno !== 0) && (ficha1 || ficha2 == 0)){
+    else if((turno !== 0) && (ficha1 || ficha2 == 0) && eliminacionFicha === false){
         //Si el turno es el de charmander al hacer click en la celda la dejaremos vacia y sumaremos a ficha1 una ficha
         if(turno == charmander){
             document.getElementById(celda).innerHTML = "";
+            eliminacionFicha = true
             ficha1++
         }
         //Repeticion del if anterior pero con squirtle y ficha2
         else if(turno == squirtle){
             document.getElementById(celda).innerHTML = "";
+            eliminacionFicha = true
             ficha2++
         }
         //Al realizar lo anterior la celda del tablero estara en 0, "vacia"

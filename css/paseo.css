@@ -7,24 +7,6 @@ body{
     padding: 0;
     overflow-x: hidden;
 }
-.btn.btn-primary{
-    background-color: rgb(60, 78, 199) !important;
-    border-color: rgb(60, 78, 199);
-}
-.btn.btn-primary:active{
-    background-color: rgb(229, 236, 16) !important;
-    transform: translate(0, -2px);
-}
-.bi{
-    color:  rgb(229, 236, 16) !important;
-}
-.mandos{
-    width: 20rem;
-    height: 10rem;
-    position: absolute;
-    top: 8%;
-    left: 86%;
-}
 .boton-inicio-mvl-1{
     position: absolute;
     top: 0%;
@@ -58,6 +40,21 @@ body{
     background-size: 200px;
     position :fixed;
 }
+.puntuacion{
+    display: flex;
+    justify-content: center;
+}
+#marcador{
+    width: 10rem;
+    height: 4rem;
+    background-color: rgb(60, 78, 199);
+    color: rgb(229, 236, 16);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    border-radius: 0.3rem;
+}
 .pokeball{
     background-image: url(../images/masterball-def.png);
     width: 42px;
@@ -66,6 +63,22 @@ body{
     position: fixed;
     top: 20%;
     left: 50%;
+}
+.poke-1{
+    top: 45%;
+    left: 70%;
+}
+.poke-2{
+    top: 15%;
+    left: 20%;
+}
+.poke-3{
+    top: 80%;
+    left: 10%;
+}
+.poke-4{
+    top: 85%;
+    left: 55%;
 }
 .arbol{
     background-image: url(../images/arbol-poke-def.png);
@@ -83,9 +96,28 @@ body{
     height: 129px;
     background-size: 100% 100%;
     position:fixed;
-    top: 40%;
-    left: 50%;
+    top: 100px;
+    left: 150px;
 }
-
+.edf-1{
+    top: 15%;
+    left: 70%;
+}
+.edf-2{
+    top: 30%;
+    left: 38%;
+}
+.edf-3{
+    top: 65%;
+    left: 20%;
+}
+.edf-4{
+    top: 80%;
+    left: 65%;
+}
+.edf-5{
+    top: 60%;
+    left: 85%;
+}
 
 
