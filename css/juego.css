@@ -38,6 +38,14 @@ body{
     align-items: center;
     text-align: center; 
 }
+#nombreJug1{
+    color: rgb(229, 236, 16);
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+#nombreJug2{
+    color: rgb(229, 236, 16);
+    font-family: 'Mochiy Pop One', sans-serif;
+}
 .texto-jugadores{
     margin-top: 0.5rem;
 }

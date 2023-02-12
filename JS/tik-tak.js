@@ -22,7 +22,13 @@ let eliminacionFicha = false;
 let fraseTurno1 = document.getElementById("infoJugador1")
 let textoTurno1 = document.getElementById("textoJugador1")
 fraseTurno1.innerHTML = 3;
-textoTurno1.innerHTML = "te quedan varios turnos"
+textoTurno1.innerHTML = "Te quedan varios turnos"
+//Estilos de la frase y del numero de turno en el dipslay del jugador 1
+fraseTurno1.style.color = "rgba(236, 0, 0, 0.733)"
+textoTurno1.style.color = "orange"
+fraseTurno1.style.fontFamily = "'Mochiy Pop One', sans-serif"
+textoTurno1.style.fontFamily = "'Mochiy Pop One', sans-serif" 
+
 //Inicio conteo de las fichas para el jugador 1, para saber cuantas fichas nos quedan por jugar
 function contadorJugador1(){
     if(ficha1 > 1){
@@ -35,14 +41,20 @@ function contadorJugador1(){
     }
     else{
         fraseTurno1.innerHTML = ""
-        textoTurno1.innerHTML = "Te has quedado sin turnos"
+        textoTurno1.innerHTML = "¡Te has quedado sin turnos!"
     }
 }
 //Componentes que queremos mostrar en el display izquierdo junto a la pantalla del jugador 1
 let fraseTurno2 = document.getElementById("infoJugador2")
 let textoTurno2 = document.getElementById("textoJugador2")
 fraseTurno2.innerHTML = 3;
-textoTurno2.innerHTML = "te quedan varios turnos"
+textoTurno2.innerHTML = "Te quedan varios turnos"
+//Estilos de la frase y del numero de turno en el dipslay del jugador 2
+fraseTurno2.style.color = "rgba(236, 0, 0, 0.733)"
+textoTurno2.style.color = "orange"
+fraseTurno2.style.fontFamily = "'Mochiy Pop One', sans-serif"
+textoTurno2.style.fontFamily = "'Mochiy Pop One', sans-serif" 
+
 
 //Inicio conteo de las fichas para el jugador 2, para saber cuantas fichas nos quedan por jugar
 function contadorJugador2(){
@@ -56,7 +68,7 @@ function contadorJugador2(){
     }
     else{
         fraseTurno2.innerHTML = ""
-        textoTurno2.innerHTML = "Te has quedado sin turnos"
+        textoTurno2.innerHTML = "¡Te has quedado sin turnos!"
     }
 }
 
@@ -100,22 +112,11 @@ function hacerClick(pos){
     contadorJugador1()//Conteo del numero de fichas restantes del jugador 1
     contadorJugador2()//Conteo del numero de fichas restantes del jugador 2
 }
-/*
-//Inicio de la funcion de reset para la nueva partida
-function volverJugar() {
-    board = [0,0,0,0,0,0,0,0,0] //Volvemos a definir el array para resetearlo
-    turno = charmander //Empezamos como en el primer turno de la primera partida
-    for (let i = 0; i < 9; i++) {
-        document.getElementById(i).innerHTML = "" //Ponemos en blanco el tablero de nuevo(reemplazamos con cadena vacia)
-    }
-}
-*/
 //Función para mostrar al ganador
 function ganadorFinal() {
         window.location.href = "../pages/ganador.html"
     
 }
-
 //Funcion para validar el ganador(analizaremos las lineas verticales, diagonales y horizontales cada vez que demos click sobre una celda)
 //Se realizara la comprobación por cada click que hagamos
 function validarGanador() {

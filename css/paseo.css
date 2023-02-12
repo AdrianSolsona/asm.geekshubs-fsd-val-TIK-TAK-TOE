@@ -130,5 +130,35 @@ body{
     top: 60%;
     left: 85%;
 }
+.boton-vuelta{
+    width: 11rem ;
+    background-color: rgb(60, 78, 199);
+    height: 2.6rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 3%;
+    left: 87%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: rgb(229, 236, 16) ;
+    font-size: 1rem;
+    border-color: rgb(60, 78, 199);
+}
+.boton-vuelta:hover{
+    background-color: rgb(229, 236, 16);
+    color: rgb(60, 78, 199);
+}
+.flecha-volver{
+    font-size: 1rem !important;
+    margin-bottom: 0.2rem;
+    color: rgb(229, 236, 16) ;
+    height: 100%;
+    margin-top: 0.8rem;
+}
+.flecha-volver:hover{
+    color: rgb(60, 78, 199);
+}
 
 
