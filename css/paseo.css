@@ -55,6 +55,35 @@ body{
     font-family: 'Mochiy Pop One', sans-serif;
     border-radius: 0.3rem;
 }
+#tapa-pokedex{
+    background-image: url(../images/roca-def-2.png);
+    width: 80px;
+    height: 80px;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 84%;
+    left: 80%;
+}
+.pokedex{
+    background-image: url(../images/pokedex-def.png);
+    width: 85px;
+    height: 85px;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 85%;
+    left: 80%;
+    z-index: -1;
+    cursor: pointer;
+}
+.pokeballsFalsas{
+    background-image: url(../images/masterball-def.png);
+    width: 42px;
+    height: 42px;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+}
 .pokeball{
     background-image: url(../images/masterball-def.png);
     width: 42px;
