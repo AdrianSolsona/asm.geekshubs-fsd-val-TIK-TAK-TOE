@@ -77,34 +77,34 @@ function cambiarTurno(){
 
     turno = (turno == charmander) ? squirtle: charmander; //(Ternaria) si estamos en el turno "charmander", lo cambiamos a "squirtle" y si esta en "squirtle" cambiamos a "charmander"
 }
+
 //Inicio funcion para marcar la celda que tenemos seleccionada
 function marcarCelda(celda){
-    if((tablero[celda] === 0)  && (ficha1 > 0 || ficha2  > 0)){// si la celda esta vacia y las ficha que tiene por poner el jugador es mayor 0 
-        (turno == charmander) ? ficha1-- : ficha2--;//Si el turno en el que nos encontramos es el de charmander decrementamos a ficha 1 sino a ficha2
-        tablero[celda] = turno// Aqui guardamos el turno sea "y" o la "x"
-        document.getElementById(celda).innerHTML = turno //Introduccimos el turno correspondiente en la celda
-        cambiarTurno() // Cambiamos de turno
-        eliminacionFicha = false
-    }
-    //Si la celda esta llena y ficha 1 o 2 son iguales a 0 ejecutaremos el else if
-    else if((turno !== 0) && (ficha1 || ficha2 == 0) && eliminacionFicha === false){
-        //Si el turno es el de charmander al hacer click en la celda la dejaremos vacia y sumaremos a ficha1 una ficha
-        if(turno == charmander){
-            document.getElementById(celda).innerHTML = "";
-            eliminacionFicha = true
-            ficha1++
+    if((tablero[celda] === 0)  && (ficha1 > 0 || ficha2  > 0)){// si la celda esta vacia y las ficha que tiene por poner el jugador es mayor 0
+        //Aqui comprobamos en que turno nos encontramos y el numero de fichas restantes del turno, esto es para añadir un condicion que no nos permita agarrar una ficha que corresponda al otro turno
+        if ((turno === charmander && ficha1 > 0) || (turno === squirtle && ficha2 > 0)){
+            (turno == charmander) ? ficha1-- : ficha2--;//Si el turno en el que nos encontramos es el de charmander decrementamos a ficha 1 sino a ficha2
+            tablero[celda] = turno// Aqui guardamos el turno sea "y" o la "x"
+            document.getElementById(celda).innerHTML = turno //Introduccimos el turno correspondiente en la celda
+            cambiarTurno() // Cambiamos de turno
+            ultimaFicha = celda;
+            eliminacionFicha = false//El jugador no ha seleccionado una ficha para eliminar del tablero
         }
-        //Repeticion del if anterior pero con squirtle y ficha2
-        else if(turno == squirtle){
-            document.getElementById(celda).innerHTML = "";
-            eliminacionFicha = true
-            ficha2++
-        }
-        //Al realizar lo anterior la celda del tablero estara en 0, "vacia"
-        tablero[celda] = 0;
     }
-}
-
+    //Si la celda esta llena y ficha 1 o 2 son iguales a 0 y la variable elminacionFicha es igual a false ejecutaremos el else if
+    else if (tablero[celda] === turno && ficha1 === 0 && ficha2 === 0 && eliminacionFicha === false) {
+        document.getElementById(celda).innerHTML = "";
+        eliminacionFicha = true;//El jugador ha seleccionado una ficha para eliminar del tablero
+        //Dependiendo de quien sea el turno sumamos al primer jugador o segundo jugador
+        if (turno === charmander) {
+            ficha1++;
+        } 
+        else{
+            ficha2++;
+        }
+        tablero[celda] = 0;//Restablecemos la celda correspondiente como vacia despues de haber retirado una ficha
+    }
+}   
 //Inicio de la Funcion al dar click sobre celda
 function hacerClick(pos){
     marcarCelda(pos) //Aqui llamamos a la funcion de marcarCelda para que cuando hagamos click quede marcada
@@ -115,7 +115,6 @@ function hacerClick(pos){
 //Función para mostrar al ganador
 function ganadorFinal() {
         window.location.href = "../pages/ganador.html"
-    
 }
 //Funcion para validar el ganador(analizaremos las lineas verticales, diagonales y horizontales cada vez que demos click sobre una celda)
 //Se realizara la comprobación por cada click que hagamos
