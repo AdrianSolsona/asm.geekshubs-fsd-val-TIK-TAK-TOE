@@ -44,6 +44,60 @@ body{
 .tik-2{
     display: none;
 }
+.normas{
+    margin-left: 5rem;
+    position: fixed;
+}
+#myBtn{
+    background-color: rgb(60, 78, 199);
+    width: 4rem !important;
+    height: 4rem !important;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(60, 78, 199);
+}
+#myBtn:hover{
+    transform: translate(0,-5px);
+    opacity: 0.8;
+}
+.logo-normas{
+    font-size: 3rem;
+    color: rgb(229, 236, 16);
+    margin-bottom: 0.1rem;
+    margin-right: 0.1rem;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: rgb(60, 78, 199) !important;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
 /*Inicio de media query*/
 @media(max-width: 992px){
     .img-pokemon{
@@ -54,13 +108,19 @@ body{
         margin-top: 6rem;
     }
 }
+@media(max-width: 772px){
+    .normas{
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+}
 @media(max-width: 576px){
     .img-pokemon1{
         display: none;
     }
     .img-pokemon2{
         display: flex;
-        margin-top: 7rem;
+        margin-top: 3.5rem;
     }
     .tik-1{
         display: none;
@@ -73,3 +133,57 @@ body{
         margin-right: 1rem;
     }
 }
+.normas{
+    margin-left: 5rem;
+    position: fixed;
+}
+#myBtn{
+    background-color: rgb(60, 78, 199);
+    width: 4rem !important;
+    height: 4rem !important;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(60, 78, 199);
+}
+#myBtn:hover{
+    transform: translate(0,-5px);
+    opacity: 0.8;
+}
+.logo-normas{
+    font-size: 3rem;
+    color: rgb(229, 236, 16);
+    margin-bottom: 0.1rem;
+    margin-right: 0.1rem;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
