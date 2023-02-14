@@ -84,10 +84,9 @@ body{
     overflow: auto; 
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
-  }
-
+}
 /*Estilos del contenedor del texto del modal*/
-  .modal-contenido{
+.modal-contenido{
     background-color: rgb(60, 78, 199) !important;
     color: rgb(229, 236, 16) !important;
     font-family: 'Mochiy Pop One', sans-serif !important;
@@ -98,28 +97,26 @@ body{
     height: 60% !important;
     opacity: 0.95;
     overflow-y: auto;
-    z-index: 999;
-  }
-
-  /* Boton "X" de cierre */
-  .cierre{
+}
+/* Boton "X" de cierre */
+.cierre{
     color: rgba(236, 0, 0, 0.733);
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  /*Estilos referentes a los parrafos dentro del modal*/
-  .reglas-tik{
+}
+/*Estilos referentes a los parrafos dentro del modal*/
+.reglas-tik{
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-  }
-  .reglas-pokemon{
+}
+.reglas-pokemon{
     font-size: 1.3rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
-  }
+}
 /*Inicio de media query*/
 @media(max-width: 992px){
     .img-pokemon{

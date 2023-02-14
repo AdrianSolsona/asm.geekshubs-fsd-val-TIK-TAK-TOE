@@ -25,30 +25,35 @@
     <div class="pokedex">
         <a href=""></a>
     </div>
-    <!--Div referente a las pokeballs que hay que recoger-->
+    <!--Bloque de div referente a las pokeballs que hay que recoger-->
     <div class="pokeballsFalsas"></div>
     <div class="pokeball"></div>
     <div class="pokeball poke-1"></div>
     <div class="pokeball poke-2"></div>
     <div class="pokeball poke-3"></div>
     <div class="pokeball poke-4"></div>
-    <!--Div referente a los arboles-->
+    <!--Bloque de div referente a los arboles-->
     <div class="arbol"></div>
-    <!--Div referente a los arboles-->
+    <!--Bloque de div referente a los arboles-->
     <div class="edificios"></div>
     <div class="edificios edf-1"></div>
     <div class="edificios edf-2"></div>
     <div class="edificios edf-3"></div>
     <div class="edificios edf-4"></div>
     <div class="edificios edf-5"></div>
-    <button class="boton-vuelta" onclick="location.href='../pages/juego.html'" type="button"><i class="bi bi-box-arrow-in-left flecha-volver">Volver al juego</i></button>
+    <!--Div referente a los arboles-->
+    <button class="boton-vuelta" onclick="location.href='../pages/juego.html'" type="button"><i class="bi bi-box-arrow-in-left flecha-volver">Tik tak toe</i></button>
+    <!--Comienzo del boton y del modal donde se reflejarán las normas del juego-->
     <div class="normas">
-        <button id="myBtn"><i class="bi bi-patch-question-fill logo-normas"></i></button>
-  <!-- The Modal -->
-        <div id="myModal" class="modal">
-    <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close" style="cursor: pointer;">&times;</span>
+        <!--Logo interrogante-->
+        <button id="boton-interrogante"><i class="bi bi-patch-question-fill logo-normas"></i></button>
+        <!--Comienzo del div contenedor del modal con la información de las reglas del juego-->
+        <div id="miModal" class="modal-pokemon">
+        <!-- Contenido interior del modal cuando se despliega-->
+            <div class="modal-contenido">
+                <!--Etiqueta de cierre-->
+                <span class="cierre" style="cursor: pointer;">&times;</span>
+                <!--Texto referente a las reglas del juego-->
                 <div class="reglas-tik">
                     <p class="reglas-pokemon">Reglas del paseo del profesor Oak</p>
                 </div>
@@ -56,7 +61,7 @@
                     <p>- El objetivo del juego es capturar las 5 pokeballs verdaderas</p>
                     <p>- Debes evitar el choque contra los arboles y centros pokemon</p>
                     <p>- Cuando pases por encima de una pokeball falsa no pasará nada, sin embargo al pasar por encima
-                        de una pokeball verdaderá el profesor Oak automaticamente y se sumará al contador.
+                        de una pokeball verdadera el profesor Oak automáticamente y se sumará al contador.
                     </p>
                     <p>- Una vez recogidas las 5 pokeballs verdaderas habrás ganado ofcialmente</p>
                     <p>- Cuando ya seas todo un ganador, podrás acceder al objeto oculto en el mapa</p>

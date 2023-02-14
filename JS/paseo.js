@@ -66,13 +66,14 @@ function generacionArboles(){
         document.body.appendChild(div)
     }
 }
-//Igual a la anterior
+//Igual a la anterior a expeción del z-index
 function generacionPokeballs() {
     for(let i = 0; i < numeroBolas; i++){
         const div = document.createElement('div')
         div.classList.add('pokeballsFalsas')
         div.style.left = Math.random()  * 100 + "%"
         div.style.top = Math.random()  * 100 + "%"
+        div.style.zIndex = "-1"
         document.body.appendChild(div)
     }
 }

@@ -24,7 +24,7 @@
         <div class="charmander-img">
             <img class="img-principal-char" src="../images/charmander-top-rec.png" alt="">
             <img class="img-cha-mvl" src="../images/charmander-mvl-def.png" alt="">
-            <input class="info-jugador" type="text" id="nombreJugador1" maxlength="15" pattern="[A-Za-z0-9]+" required>
+            <input class="info-jugador" placeholder="Introduce un nombre..." type="text" id="nombreJugador1" maxlength="15" pattern="[A-Za-z0-9]+" required oninput="this.value = this.value.replace(/[^A-Za-z0-9]/g, '')" >
             <img class="titulo-jugador" src="../images/player-1-def.png" alt="">
         </div>
         <!--Logo Vs que separa las imagenes-->
@@ -37,7 +37,7 @@
         <div class="squirtle-img" >
             <img class="img-principal-sqr" src="../images/squirtle-top-def-rec.png" alt="">
             <img class="sqr-icon" src="../images/sqr-mvl-def.png" alt="">
-            <input class="info-jugador sqr-inp" type="text" id="nombreJugador2" maxlength="15" pattern="[A-Za-z0-9]+" required>
+            <input class="info-jugador sqr-inp" placeholder="Introduce un nombre..." type="text" id="nombreJugador2" maxlength="15" pattern="[A-Za-z0-9]+" required oninput="this.value = this.value.replace(/[^A-Za-z0-9]/g, '')" >
             <img class="titulo-jugador" src="../images/jugador-2-def.png" alt="">
         </div>
     </div>

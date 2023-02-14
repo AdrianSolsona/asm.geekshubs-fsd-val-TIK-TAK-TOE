@@ -12,7 +12,7 @@ const seleccionJugador = () => {
     if(jugador1 == "" || jugador2 == ""){
         //alert("Tienes que poner algun nombre para los 2 jugadores")
         let mensaje = document.createElement("div");
-            mensaje.innerHTML = "¡Tienes que introducir dos nombres válidos!<br><br> Cualquier caracter es válido <br> (Máximo de 20 caracteres)";
+            mensaje.innerHTML = "¡Tienes que introducir dos nombres válidos!<br><br> Cualquier caracter es válido <br> (Máximo de 15 caracteres)";
             mensaje.style.width = "30rem"
             mensaje.style.height = "10rem"
             mensaje.style.opacity = "0.7"
