@@ -130,6 +130,7 @@ body{
     top: 60%;
     left: 85%;
 }
+/*Estilos del boton para volver al juego de tik-tak-toe*/
 .boton-vuelta{
     width: 8rem ;
     background-color: rgb(60, 78, 199);
@@ -160,6 +161,7 @@ body{
 .flecha-volver:hover{
     color: rgb(60, 78, 199);
 }
+/*Estilos del boton que desplegará el modal*/
 .normas{
     position: relative;
     top: 85%;
