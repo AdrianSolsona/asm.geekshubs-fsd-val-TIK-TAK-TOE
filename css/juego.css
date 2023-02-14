@@ -51,7 +51,7 @@ body{
 }
 /*Inicio de los estilos de los botones*/
 .btn-primary{
-    width: 15rem !important;
+    width: 17rem !important;
     background-color: rgb(60, 78, 199) !important;
     font-size: 1rem !important;
     height: 2.8rem;
@@ -111,6 +111,10 @@ body{
     align-items: center;
     background-color: rgb(3, 78, 24);
     transition: background-color ease-in 0.5s;
+}
+.casilla:hover{
+    background-color: rgb(115, 194, 251);
+    cursor: pointer;
 }
 /*Estilos del boton de la parte inferior*/
 .poke-batalla{

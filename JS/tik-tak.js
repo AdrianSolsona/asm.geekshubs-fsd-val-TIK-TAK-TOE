@@ -113,9 +113,7 @@ function hacerClick(pos){
     contadorJugador2()//Conteo del numero de fichas restantes del jugador 2
 }
 //Función para mostrar al ganador
-function ganadorFinal() {
-        window.location.href = "../pages/ganador.html"
-}
+
 //Funcion para validar el ganador(analizaremos las lineas verticales, diagonales y horizontales cada vez que demos click sobre una celda)
 //Se realizara la comprobación por cada click que hagamos
 function validarGanador() {
@@ -127,18 +125,66 @@ function validarGanador() {
 
         //Combinaciones horizontales
 
-        if(tablero[0] == pokemon && tablero && tablero[1] == pokemon && tablero [2] == pokemon){ganadorFinal("ganador" + pokemon)}
-        if(tablero[3] == pokemon && tablero && tablero[4] == pokemon && tablero [5] == pokemon){ganadorFinal("ganador" + pokemon)}
-        if(tablero[6] == pokemon && tablero && tablero[7] == pokemon && tablero [8] == pokemon){ganadorFinal("ganador" + pokemon)}
+        if(tablero[0] == pokemon && tablero && tablero[1] == pokemon && tablero [2] == pokemon){
+            if(pokemon == charmander) {
+                window.location.href = "../pages/ganadorCharmander.html";
+              } else if(pokemon == squirtle) {
+                window.location.href = "../pages/ganadorSquirtle.html";
+              }
+        }
+        if(tablero[3] == pokemon && tablero && tablero[4] == pokemon && tablero [5] == pokemon){
+            if(pokemon == charmander) {
+                window.location.href = "../pages/ganadorCharmander.html";
+              } else if(pokemon == squirtle) {
+                window.location.href = "../pages/ganadorSquirtle.html";
+              }
+        }
+        if(tablero[6] == pokemon && tablero && tablero[7] == pokemon && tablero [8] == pokemon){
+            if(pokemon == charmander) {
+                window.location.href = "../pages/ganadorCharmander.html";
+              } else if(pokemon == squirtle) {
+                window.location.href = "../pages/ganadorSquirtle.html";
+              }    
+        }
         //Combinaciones Verticales
 
-        if(tablero[0] == pokemon && tablero && tablero[3] == pokemon && tablero [6] == pokemon){ganadorFinal("ganador" + pokemon)}
-        if(tablero[1] == pokemon && tablero && tablero[4] == pokemon && tablero [7] == pokemon){ganadorFinal("ganador" + pokemon)}
-        if(tablero[2] == pokemon && tablero && tablero[5] == pokemon && tablero [8] == pokemon){ganadorFinal("ganador" + pokemon)}
+        if(tablero[0] == pokemon && tablero && tablero[3] == pokemon && tablero [6] == pokemon){
+            if(pokemon == charmander) {
+                window.location.href = "../pages/ganadorCharmander.html";
+              } else if(pokemon == squirtle) {
+                window.location.href = "../pages/ganadorSquirtle.html";
+              }
+        }
+        if(tablero[1] == pokemon && tablero && tablero[4] == pokemon && tablero [7] == pokemon){
+            if(pokemon == charmander) {
+                window.location.href = "../pages/ganadorCharmander.html";
+              } else if(pokemon == squirtle) {
+                window.location.href = "../pages/ganadorSquirtle.html";
+              }
+        }
+        if(tablero[2] == pokemon && tablero && tablero[5] == pokemon && tablero [8] == pokemon){
+            if(pokemon == charmander) {
+                window.location.href = "../pages/ganadorCharmander.html";
+              } else if(pokemon == squirtle) {
+                window.location.href = "../pages/ganadorSquirtle.html";
+              }
+        }
         //Combinaciones diagonales
 
-        if(tablero[0] == pokemon && tablero && tablero[4] == pokemon && tablero [8] == pokemon){ganadorFinal("ganador" + pokemon)}
-        if(tablero[2] == pokemon && tablero && tablero[4] == pokemon && tablero [6] == pokemon){ganadorFinal("ganador" + pokemon)}
+        if(tablero[0] == pokemon && tablero && tablero[4] == pokemon && tablero [8] == pokemon){
+            if(pokemon == charmander) {
+                window.location.href = "../pages/ganadorCharmander.html";
+              } else if(pokemon == squirtle) {
+                window.location.href = "../pages/ganadorSquirtle.html";
+              }
+        }
+        if(tablero[2] == pokemon && tablero && tablero[4] == pokemon && tablero [6] == pokemon){
+            if(pokemon == charmander) {
+                window.location.href = "../pages/ganadorCharmander.html";
+              } else if(pokemon == squirtle) {
+                window.location.href = "../pages/ganadorSquirtle.html";
+              }
+        }
     }
 }
 

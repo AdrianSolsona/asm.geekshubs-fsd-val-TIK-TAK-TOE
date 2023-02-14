@@ -8,7 +8,7 @@ body{
 }
 /*Estilos referentes a las imagene de tik tak toe*/
 .tik-tak{
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     display: flex;
     justify-content: center
 }
@@ -34,12 +34,14 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+    gap: 3rem;
 }
 /*Estilos referentes a las imagenes de ganador*/
 .ganador-total{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .ganador-mvl{
     display: none;
@@ -80,5 +82,11 @@ body{
     }
     .ganador-total{
         margin-bottom: 3rem;
+    }
+    .trofeo-img{
+        display: none;
+    }
+    .tik-tak-mvl{
+        margin-top: 0rem;
     }
 }
