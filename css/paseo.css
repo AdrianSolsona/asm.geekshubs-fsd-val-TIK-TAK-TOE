@@ -160,5 +160,13 @@ body{
 .flecha-volver:hover{
     color: rgb(60, 78, 199);
 }
+.normas{
+    position: relative;
+    top: 85%;
+    left: -1%;
+}
+
+
+
 
 
