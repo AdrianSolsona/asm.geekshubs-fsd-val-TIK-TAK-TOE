@@ -36,6 +36,7 @@ body{
     margin-top: 3rem;
     gap: 3rem;
 }
+
 /*Estilos referentes a las imagenes de ganador*/
 .ganador-total{
     display: flex;
@@ -88,5 +89,11 @@ body{
     }
     .tik-tak-mvl{
         margin-top: 0rem;
+    }
+    .sqr-img{
+        width: 8.5rem;
+    }
+    .charmander-img{
+        width: 7.5rem;
     }
 }

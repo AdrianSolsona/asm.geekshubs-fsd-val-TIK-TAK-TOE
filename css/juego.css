@@ -115,6 +115,7 @@ body{
 .casilla:hover{
     background-color: rgb(115, 194, 251);
     cursor: pointer;
+    opacity: 0.8;
 }
 /*Estilos del boton de la parte inferior*/
 .poke-batalla{
