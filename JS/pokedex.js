@@ -7,19 +7,54 @@ function fetchPokemon(id){
         crearPokemon(data)
     })//Definimos esta función que se ejecuta despues de que se resuelva la promesa del then anterior y llamamos a la funcion crearPokemon para mostrar los datos del pokemon que nos hemos traido con el then     
 }
+let pokemonData = [];
+
+function fetchPokemons(num) {
+  for (let i = 1; i <= num; i++) {
+    fetchPokemon(i);
+  }
+}
+
+function fetchPokemon(id) {
+  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .then((res) => res.json())
+    .then((data) => {
+      pokemonData.push(data);
+      crearPokemon(data);
+    });
+}
+const filtroPokemon = document.querySelector("#filtroPokemon");
+
+filtroPokemon.addEventListener("input", filtrarPokemons);
+
+function filtrarPokemons() {
+    const filtro = filtroPokemon.value.toLowerCase();
+  
+    const pokemonFiltrados = pokemonData.filter((pokemon) =>
+      pokemon.name.toLowerCase().includes(filtro)
+    );
+  
+    contenidoPokemon.innerHTML = "";
+  
+    pokemonFiltrados.forEach((pokemon) => {
+      crearPokemon(pokemon);
+    });
+  }
+  
 //Utilizamos la funcion definida anteriormente para obtener los datos de una cantidad de pokemon determinada
-function fetchPokemons (num){
+/*function fetchPokemons (num){
     /*recorremos con un bucle for la secuencia de 1 hasta num(si fuera 0 daria un pequeño error ya que en 0 la api no devuelve nada, el primer pokemon esta en 1),
     y llamamos a la función anterior pasando num como argumento para obtener los datos del pokemon correspondiente*/
-    for (let i = 1; i <= num; i++) {
-        fetchPokemon(i)   
-    }
-}
+    //for (let i = 1; i <= num; i++) {
+        //fetchPokemon(i)   
+    //}
+//}
+
 // Inicializamos la funcion para poder representar mediante una tarjeta cada pokemon que busquemos en la api
 function crearPokemon(pokemon){
     //Creamos la tarjeta que sera el contenedor de todos los elementos de información acerca del pokemon que queremos mostrar
     const contenedorPokemon = document.createElement("div");
-    contenedorPokemon.classList.add("Pokemon-tarjeta")
+    contenedorPokemon.classList.add("pokemon-tarjeta")
     //Creamos el contenedor donde se alojará la imagen de cada pokemón
     const contenedorImagen = document.createElement("div");
     contenedorImagen.classList.add("img-contenedor");
@@ -31,6 +66,7 @@ function crearPokemon(pokemon){
     contenedorImagen.appendChild(imgPokemon);
     //Creamos un elemento parrafo para mostrar el numero de la pokedex que tiene el pokemón
     const numPokedex = document.createElement("p");
+    numPokedex.classList.add("numero-pokemon");
     numPokedex.textContent = `#${pokemon.id.toString().padStart(3, 0)}`;/*Para mostrar un numero estilo pokedex, necesitamos pasar el id a una cadena, para posteriormente con el padstar
     poder añadir un numero de longitud 3 y que añada dos 0 delante del id del pokemon y utilizamos el textContent para asignar el contenido del texto a numPokedex que es el parrafo*/
     //Con el nombre del pokemon que queremos mostrar hacemos exactamente lo mismo que anteriormente    
@@ -42,8 +78,8 @@ function crearPokemon(pokemon){
     contenedorPokemon.appendChild(contenedorImagen);
     contenedorPokemon.appendChild(numPokedex);
     contenedorPokemon.appendChild(nombrePokemon);
-
+    //Mostramos el contenido de todo el contenido de nuestro pokemon en el elemento HTML que definimos en la linea 1
     contenidoPokemon.appendChild(contenedorPokemon)
-  
 }
-fetchPokemons(7)
+fetchPokemons(800)
+

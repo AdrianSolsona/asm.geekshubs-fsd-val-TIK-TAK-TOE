@@ -1,0 +1,108 @@
+body{
+    background: rgb(85, 189, 163);
+    background: linear-gradient(
+    90deg,
+    rgb(85, 189, 161) 0%,
+    rgb(108, 240, 181) 54%,
+    rgb(182, 242, 216) 82%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+.contenedor-imagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-pokemon{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    width: 30rem;
+}
+.ash-img{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+.ash{
+    width: 14rem;
+}
+.profesor{
+    position: absolute;
+    top: 35%;
+    left: 78%;
+}
+.profe-oak{
+    width: 20rem;
+}
+.barra-busqueda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#filtroPokemon{
+    width: 18rem;
+    border: none; /* quitamos el borde predeterminado */
+    font-size: 1.1rem; /* tamaño de fuente */
+    padding: 0.7rem; 
+    background-color: rgb(60, 78, 199);
+    border-radius: 0.7rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background-image: url("../images/pokedex-def.png");
+    background-repeat: no-repeat;
+    background-position: 13.8rem center;
+    background-size: 4.5rem;
+    color: rgb(229, 236, 16);
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-weight: 400;
+}
+.bi.bi-search{
+    font-size: 1.5rem;
+    background-color: rgb(108, 240, 181);
+}
+#filtroPokemon:hover{
+    cursor: pointer;
+    transform: translate(0,-1px);
+}
+.pokemon-global{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.pokemon-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3rem;
+    margin-top: 5rem;
+    
+}
+.pokemon-tarjeta{
+    width: 18rem;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    background-color: white;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-contenedor{
+    background-image: url("/blob.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img{
+    width: 20rem;
+}
+.p{
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+.numero-pokemon{
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+.nombrePokemon{
+    font-family: 'Mochiy Pop One', sans-serif;
+}
