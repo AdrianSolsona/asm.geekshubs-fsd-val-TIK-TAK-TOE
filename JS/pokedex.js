@@ -76,7 +76,7 @@ function crearPokemon(pokemon){
     
     const habilidadPokemon = document.createElement("p");
     habilidadPokemon.classList.add("habilidadPokemon");
-    habilidadPokemon.textContent = `Habilidad: ${pokemon.abilities[0].ability.name}`
+    habilidadPokemon.textContent = `Ability: ${pokemon.abilities[0].ability.name}`
     datosAdicionales.appendChild(habilidadPokemon)
 
     //cuando hacemos click en el logo del arrow activamos el div y le damos los estilos correspondientes  
