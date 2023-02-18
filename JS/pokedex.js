@@ -74,12 +74,50 @@ function crearPokemon(pokemon){
     nombrePokemon.classList.add("nombrePokemon");
     nombrePokemon.textContent = pokemon.name;/*De nuevo con el textContent mostraremos en el elemento html de nombrePokemon en este caso el nombre del pokemon que sacamos del apartado name
     del objeto javascript*/
+    const mostrarDatos = document.createElement("div")
+    mostrarDatos.classList.add("datos-pokemon")
+
+    const datosAdicionales = document.createElement("div")
+    datosAdicionales.classList.add("datos-adicionales")
+    
+
+    const tipoPokemon = document.createElement("p");
+    tipoPokemon.classList.add("tipoPokemon");
+    tipoPokemon.textContent = "type:" + " " + pokemon.types[0].type.name
+    datosAdicionales.appendChild(tipoPokemon);  
+  
+    
+    const habilidadPokemon = document.createElement("p");
+    habilidadPokemon.classList.add("habilidadPokemon");
+    habilidadPokemon.textContent = `Habilidad: ${pokemon.abilities[0].ability.name}`
+    datosAdicionales.appendChild(habilidadPokemon)
+
+
+    mostrarDatos.addEventListener("click", function() {
+      datosAdicionales.style.display = "flex" 
+      datosAdicionales.style.justifyContent = "center"
+      datosAdicionales.style.alignItems = "center"
+      datosAdicionales.style.flexDirection = "column"  
+    })
+
+    document.addEventListener("click", function(event) {
+      const estaDentroMostrarDatos = mostrarDatos.contains(event.target)
+      const estaDentroDatosAdicionales = datosAdicionales.contains(event.target)
+      if (!estaDentroMostrarDatos && !estaDentroDatosAdicionales) {
+        datosAdicionales.style.display = "none"
+      }
+    })
+
     //Añadimos al contenedor principal
     contenedorPokemon.appendChild(contenedorImagen);
     contenedorPokemon.appendChild(numPokedex);
     contenedorPokemon.appendChild(nombrePokemon);
     //Mostramos el contenido de todo el contenido de nuestro pokemon en el elemento HTML que definimos en la linea 1
     contenidoPokemon.appendChild(contenedorPokemon)
+    contenedorPokemon.appendChild(mostrarDatos)
+    contenedorPokemon.appendChild(datosAdicionales)
+
+    
 }
 fetchPokemons(800)
 

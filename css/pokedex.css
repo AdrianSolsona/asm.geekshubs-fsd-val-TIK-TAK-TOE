@@ -76,7 +76,7 @@ body{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 3rem;
-    margin-top: 5rem;
+    margin-top: 4.3rem;
     
 }
 .pokemon-tarjeta{
@@ -105,4 +105,28 @@ body{
 }
 .nombrePokemon{
     font-family: 'Mochiy Pop One', sans-serif;
+}
+.datos-pokemon{
+    background-image: url("/arrow.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 2%;
+    background-size: 1.3rem;
+    cursor: pointer;
+}
+.datos-adicionales{
+    width: 100%;
+    height: 5rem;
+    display: none;
+}
+.tipoPokemon{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.habilidadPokemon{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
 }
