@@ -3,7 +3,7 @@ let personaje = document.getElementById("personaje");
 let pokeballs = document.getElementsByClassName("pokeball");//Esto generará un HTML collection, con 5 objetos
 let marcador = document.getElementById("marcador");
 //Declaramos una variable que actuará como contador de las pokeballs atrapadas
-let pokeballsAtrapadas = 4;
+let pokeballsAtrapadas = 4
 //Variable que representará a la roca en pantalla
 let roca = document.getElementById("tapa-pokedex")
 //Función encargada de detectar cuando el personaje pasa por delante de una pokeballs que tiene que recoger
@@ -20,6 +20,9 @@ let detectarColision = function() {
                 personajeRect.bottom > pokeballRect.top) {
                 pokeballs[i].parentNode.removeChild(pokeballs[i]);//Accedemos al objeto padre con parentNode y recibimos el elemento hijo que deseamos eliminar con removeChild
                 pokeballsAtrapadas++;//Cada vez que se cumplan las condiciones de colisión añadimos una pokeball al contador
+                //Establecemos un sonido para que cada vez que el personaje recoga una pokeball suene
+                let sound = new Audio('../sound/bambu-click.mp3');
+                sound.play();
             }
         }
         //Mostramos el contador y la variable pokeballsAtrapadas en el
@@ -29,6 +32,17 @@ let detectarColision = function() {
             //Desplazamos la roca hacia la izquierda cuando el contador llegue a 5
             roca.style.transition = "left 2s"
             roca.style.left = "76.5%"
+
+            let sound = new Audio('../sound/winning.mp3');
+sound.addEventListener('canplaythrough', function() {
+  sound.play();
+});
+
+sound.addEventListener('ended', function() {
+  sound.currentTime = 0; // Rebobina el audio al principio
+  sound.pause(); // Pausa la reproducción del audio
+});
+
             //Definimos la variable mensaje que será un div que mostrará un mensaje, luego aplicamos los estilos al div(Igual que en CSS) 
             let mensaje = document.createElement("div");
             mensaje.innerHTML = "¡Has atrapado todas las pokeballs! <br> Haz click en la pokedex que estaba escondida";
