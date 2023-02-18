@@ -10,7 +10,7 @@ const seleccionJugador = () => {
     sessionStorage.setItem("Nombre del jugador 2",JSON.stringify(jugador2));
     //Si alguno de los inputs estan vacios, lanzamos alerta a ,los jugadores, sino pasamos al juego
     if(jugador1 == "" || jugador2 == ""){
-        //alert("Tienes que poner algun nombre para los 2 jugadores")
+        //creamos un div para mostrar en caso de que no se hayan puesto nombres validos
         let mensaje = document.createElement("div");
             mensaje.innerHTML = "¡Tienes que introducir dos nombres válidos!<br><br> Cualquier caracter es válido <br> (Máximo de 15 caracteres)";
             mensaje.style.width = "30rem"
@@ -27,7 +27,7 @@ const seleccionJugador = () => {
             mensaje.style.padding = "25px";
             mensaje.style.borderRadius = "7px";
             document.body.appendChild(mensaje);
-
+            //despues de 5 segundos el div desaparece
             setTimeout(function () {
                 mensaje.style.display = "none";
               }, 5000);

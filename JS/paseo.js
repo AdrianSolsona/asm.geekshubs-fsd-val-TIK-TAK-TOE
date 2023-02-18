@@ -3,7 +3,7 @@ let personaje = document.getElementById("personaje");
 let pokeballs = document.getElementsByClassName("pokeball");//Esto generará un HTML collection, con 5 objetos
 let marcador = document.getElementById("marcador");
 //Declaramos una variable que actuará como contador de las pokeballs atrapadas
-let pokeballsAtrapadas = 0;
+let pokeballsAtrapadas = 4;
 //Variable que representará a la roca en pantalla
 let roca = document.getElementById("tapa-pokedex")
 //Función encargada de detectar cuando el personaje pasa por delante de una pokeballs que tiene que recoger
