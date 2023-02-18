@@ -1,3 +1,4 @@
+/* Estilos del cuerpo principal de la pokedex*/
 body{
     background: rgb(85, 189, 163);
     background: linear-gradient(
@@ -11,6 +12,7 @@ body{
   margin: 0;
   padding: 0;
 }
+/* contenedor de la imagen principal de pokemon*/
 .contenedor-imagen{
     display: flex;
     justify-content: center;
@@ -21,6 +23,7 @@ body{
     margin-bottom: 3rem;
     width: 30rem;
 }
+/* Imagen de ash*/
 .ash-img{
     position: absolute;
     top: 35%;
@@ -29,6 +32,7 @@ body{
 .ash{
     width: 14rem;
 }
+/* Imagen de profesor oak*/
 .profesor{
     position: absolute;
     top: 35%;
@@ -37,6 +41,7 @@ body{
 .profe-oak{
     width: 20rem;
 }
+/*Estilos de la barra de busqueda*/
 .barra-busqueda{
     display: flex;
     justify-content: center;
@@ -44,8 +49,8 @@ body{
 }
 #filtroPokemon{
     width: 18rem;
-    border: none; /* quitamos el borde predeterminado */
-    font-size: 1.1rem; /* tamaño de fuente */
+    border: none;
+    font-size: 1.1rem; 
     padding: 0.7rem; 
     background-color: rgb(60, 78, 199);
     border-radius: 0.7rem;
@@ -58,10 +63,6 @@ body{
     font-family: 'Mochiy Pop One', sans-serif;
     font-weight: 400;
 }
-.bi.bi-search{
-    font-size: 1.5rem;
-    background-color: rgb(108, 240, 181);
-}
 #filtroPokemon:hover{
     cursor: pointer;
     transform: translate(0,-1px);
@@ -72,6 +73,7 @@ body{
     align-items: center;
     width: 100%;
 }
+/*Comienzo de los estilos referentes a la tarjeta de los pokemons*/
 .pokemon-container{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -89,11 +91,13 @@ body{
     flex-direction: column;
     align-items: center;
 }
+/* Estilos de las imagenes de la tarjeta del pokemon*/
 .img-contenedor{
-    background-image: url("/blob.svg");
+    background-image: url("../svg/blob.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
+/* Estilos de los datos de la tarjeta del pokemon*/
 .img{
     width: 20rem;
 }
@@ -107,7 +111,7 @@ body{
     font-family: 'Mochiy Pop One', sans-serif;
 }
 .datos-pokemon{
-    background-image: url("/arrow.svg");
+    background-image: url("../svg/arrow.svg");
     background-repeat: no-repeat;
     width: 2rem;
     height: 2rem;

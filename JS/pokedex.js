@@ -1,55 +1,41 @@
 const contenidoPokemon = document.querySelector(".pokemon-container")
+//Establecemos un array vacio para pushear posteriormente la data de la api
+let pokemonData = [];
+
 //Llamamos a la api para poder obtener informacíon de la pokeapi
 function fetchPokemon(id){
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)//Utilizamos el fetch para enviar la solicitud GET a la url y utilizamos el id como identificador del pokemon a consultar
     .then(res => res.json())//Definimos la función para recibir la promesa que devuelve el fetch y convertimos la respuesta del fetch en un objeto de javascript
     .then(data => {
-        crearPokemon(data)
+      pokemonData.push(data);//pusheamos la dat de la api dentro del array vacio
+      crearPokemon(data)
     })//Definimos esta función que se ejecuta despues de que se resuelva la promesa del then anterior y llamamos a la funcion crearPokemon para mostrar los datos del pokemon que nos hemos traido con el then     
 }
-let pokemonData = [];
 
+//Iteramos la informacion proveniente de la api
 function fetchPokemons(num) {
   for (let i = 1; i <= num; i++) {
     fetchPokemon(i);
   }
 }
-
-function fetchPokemon(id) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-    .then((res) => res.json())
-    .then((data) => {
-      pokemonData.push(data);
-      crearPokemon(data);
-    });
-}
+//Iniciamos el codigo respecto al filtro de busqueda
 const filtroPokemon = document.querySelector("#filtroPokemon");
 
-filtroPokemon.addEventListener("input", filtrarPokemons);
+filtroPokemon.addEventListener("input", filtrarPokemons);//cuando escribamos sobre el input el filtro actuará
 
 function filtrarPokemons() {
-    const filtro = filtroPokemon.value.toLowerCase();
+    const filtro = filtroPokemon.value.toLowerCase();//nos aseguramos que el valor se busque en minúsculas
   
-    const pokemonFiltrados = pokemonData.filter((pokemon) =>
+    const pokemonFiltrados = pokemonData.filter((pokemon) =>//Si el nombre de un Pokémon contiene el valor del filtro, el objeto Pokémon se agrega a la nueva constante de pokemonFiltrados.
       pokemon.name.toLowerCase().includes(filtro)
     );
   
-    contenidoPokemon.innerHTML = "";
+    contenidoPokemon.innerHTML = "";//Limpiamos el contenido actual del elemento HTML
   
-    pokemonFiltrados.forEach((pokemon) => {
+    pokemonFiltrados.forEach((pokemon) => {//creamos una nueva lista basada en la constante pokemonFiltrados y agregamos los elementos y con el forEach lo que hacemos es recorrer los elementos de pokemonFiltrados
       crearPokemon(pokemon);
     });
-  }
-  
-//Utilizamos la funcion definida anteriormente para obtener los datos de una cantidad de pokemon determinada
-/*function fetchPokemons (num){
-    /*recorremos con un bucle for la secuencia de 1 hasta num(si fuera 0 daria un pequeño error ya que en 0 la api no devuelve nada, el primer pokemon esta en 1),
-    y llamamos a la función anterior pasando num como argumento para obtener los datos del pokemon correspondiente*/
-    //for (let i = 1; i <= num; i++) {
-        //fetchPokemon(i)   
-    //}
-//}
-
+}
 // Inicializamos la funcion para poder representar mediante una tarjeta cada pokemon que busquemos en la api
 function crearPokemon(pokemon){
     //Creamos la tarjeta que sera el contenedor de todos los elementos de información acerca del pokemon que queremos mostrar
@@ -74,13 +60,14 @@ function crearPokemon(pokemon){
     nombrePokemon.classList.add("nombrePokemon");
     nombrePokemon.textContent = pokemon.name;/*De nuevo con el textContent mostraremos en el elemento html de nombrePokemon en este caso el nombre del pokemon que sacamos del apartado name
     del objeto javascript*/
+    //Generamos dos div para almacenar informacion adicional que traeremos de la api
     const mostrarDatos = document.createElement("div")
     mostrarDatos.classList.add("datos-pokemon")
 
     const datosAdicionales = document.createElement("div")
     datosAdicionales.classList.add("datos-adicionales")
     
-
+    //Se generan 2 elementos de parrafo para mostrar la informacion de el tipo de pokemon y de la habilidad del mismo  
     const tipoPokemon = document.createElement("p");
     tipoPokemon.classList.add("tipoPokemon");
     tipoPokemon.textContent = "type:" + " " + pokemon.types[0].type.name
@@ -92,32 +79,29 @@ function crearPokemon(pokemon){
     habilidadPokemon.textContent = `Habilidad: ${pokemon.abilities[0].ability.name}`
     datosAdicionales.appendChild(habilidadPokemon)
 
-
+    //cuando hacemos click en el logo del arrow activamos el div y le damos los estilos correspondientes  
     mostrarDatos.addEventListener("click", function() {
       datosAdicionales.style.display = "flex" 
       datosAdicionales.style.justifyContent = "center"
       datosAdicionales.style.alignItems = "center"
       datosAdicionales.style.flexDirection = "column"  
     })
-
+    //Cuando hagamos click fuera del elemento div, cambiaremos el display del div que estaba en flex a none
     document.addEventListener("click", function(event) {
-      const estaDentroMostrarDatos = mostrarDatos.contains(event.target)
-      const estaDentroDatosAdicionales = datosAdicionales.contains(event.target)
-      if (!estaDentroMostrarDatos && !estaDentroDatosAdicionales) {
+      const dentroDatos = mostrarDatos.contains(event.target)//comprobamos si mostrarDatos contiene dentro el elemento sobre el que se ha hecho click y devuelve true
+      const dentroDatosAdicionales = datosAdicionales.contains(event.target)//similar a la anterior pero con los datos adicionales
+      if (!dentroDatos && !dentroDatosAdicionales) {/*si el elemento sobre el que se ha hecho click no esta dentro de mostrarDatos o datosAdicionales significa que
+      has clickado fuera y por tanto queremos que el div se esconda mediante el display none*/
         datosAdicionales.style.display = "none"
       }
     })
-
-    //Añadimos al contenedor principal
+    //Añadimos al contenedor principal la informacion
     contenedorPokemon.appendChild(contenedorImagen);
     contenedorPokemon.appendChild(numPokedex);
     contenedorPokemon.appendChild(nombrePokemon);
-    //Mostramos el contenido de todo el contenido de nuestro pokemon en el elemento HTML que definimos en la linea 1
     contenidoPokemon.appendChild(contenedorPokemon)
     contenedorPokemon.appendChild(mostrarDatos)
-    contenedorPokemon.appendChild(datosAdicionales)
-
-    
+    contenedorPokemon.appendChild(datosAdicionales) 
 }
 fetchPokemons(800)
 
