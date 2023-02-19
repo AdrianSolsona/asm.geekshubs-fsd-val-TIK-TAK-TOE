@@ -50,6 +50,9 @@ body{
     margin-top: 0.5rem;
 }
 /*Inicio de los estilos de los botones*/
+.boton-inicio{
+    margin-left: 1rem;
+}
 .btn-primary{
     width: 17rem !important;
     background-color: rgb(60, 78, 199) !important;

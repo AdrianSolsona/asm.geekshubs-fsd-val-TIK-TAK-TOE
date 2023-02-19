@@ -35,7 +35,7 @@ Juego tik tak toe completamente funcional para 2 jugadores con minijuegos extra 
 |-|-|-|
 |![](./images/Captura-oak.JPG)|![](./images/Captura-poke-oculta.JPG)| ![](./images/Captura-pokedex-normal.JPG)|
 
-|Información extra pokedex|Versión móvil pokedex| version móvil tablero|
+|Información extra pokedex|Versión móvil pokedex| version móvil tablero| 
 |-|-|-|
 |![](./images/Captura-pikachu-pokedex.JPG)|![](./images/Captura-pokedex-movil1.JPG)| ![](./images/Captura-tablero-movil.JPG)|
 
